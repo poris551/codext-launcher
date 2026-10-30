@@ -19,7 +19,7 @@ import javax.swing.Icon
 class LaunchCodexAction : AnAction(DEFAULT_TEXT, DEFAULT_DESCRIPTION, null), DumbAware {
 
     companion object {
-        private const val CODEX_COMMAND = "codex"
+        private const val CODEX_COMMAND = "codext"
         private const val NOTIFICATION_TITLE = "Codex Launcher"
         private const val DEFAULT_TEXT = "Launch Codex"
         private const val DEFAULT_DESCRIPTION = "Open a Codex terminal"

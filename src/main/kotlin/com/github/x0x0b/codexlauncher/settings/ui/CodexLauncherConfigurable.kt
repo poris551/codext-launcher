@@ -251,7 +251,7 @@ class CodexLauncherConfigurable : SearchableConfigurable {
                     cell(enableCdProjectRootCheckbox)
                 }
                 row {
-                    this.largeComment("For more information, run codex --help")
+                    this.largeComment("For more information, run codext --help")
                 }
                 row("Custom args") {
                     cell(customArgsField)

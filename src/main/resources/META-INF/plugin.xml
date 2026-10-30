@@ -38,7 +38,7 @@
         <ol>
           <li>Click the <b>Launch Codex</b> button in the main toolbar</li>
           <li>Or choose <b>Tools</b> → <b>Launch Codex</b></li>
-          <li>The integrated terminal opens a new "Codex" tab and runs <code>codex</code> automatically</li>
+          <li>The integrated terminal opens a new "Codex" tab and runs <code>codext</code> automatically</li>
         </ol>
 
         <h2>Configuration</h2>
@@ -47,7 +47,7 @@
         <h2>Requirements</h2>
         <ul>
           <li>IntelliJ IDEA 2024.2 or later (or other compatible JetBrains IDEs)</li>
-          <li>OpenAI Codex CLI installed and available in your system PATH</li>
+          <li>The <code>codext</code> command available in your terminal shell</li>
         </ul>
     ]]></description>
 

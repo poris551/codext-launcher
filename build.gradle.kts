@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.github.x0x0b"
-version = "1.1.17"
+version = "1.1.18"
 
 repositories {
     mavenCentral()
@@ -37,6 +37,8 @@ intellijPlatform {
         }
 
         changeNotes = """
+            Launch <a href="https://github.com/Loongphy/codext">Loongphy/codext</a> with the codext command instead of codex, preserving existing CLI arguments and notify callbacks.
+            Rename the README display title to Codext Launcher.
             Add support for GPT-5.6 Sol, Terra, and Luna models.
         """.trimIndent()
     }

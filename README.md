@@ -1,21 +1,22 @@
-# Codex Launcher - IntelliJ Plugin
+# Codext Launcher - IntelliJ Plugin
 
-[![Version](https://img.shields.io/badge/version-1.1.17-blue.svg)](https://github.com/x0x0b/codex-launcher/releases)
+![Version](https://img.shields.io/badge/version-1.1.18-blue.svg)
 [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-2024.2+-orange.svg)](https://www.jetbrains.com/idea/)
-[![JetBrains Plugin Downloads](https://img.shields.io/jetbrains/plugin/d/28264)](https://plugins.jetbrains.com/plugin/28264-codex-launcher)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/x0x0b/codex-launcher)
 
 > [!IMPORTANT]
-> Codex is now officially integrated into JetBrains IDEs.
-> Install the official integration: https://developers.openai.com/codex/ide/#jetbrains-ide-integration.
->
-> With an official integration now available, this plugin is expected to transition to maintenance-only mode.
+> This version has been modified to launch [Loongphy/codext](https://github.com/Loongphy/codext) using the `codext` command instead of `codex`.
 
 <img width="800" alt="The screenshot of Codex Launcher." src="https://github.com/user-attachments/assets/4ee3fbd8-e384-4672-94c6-e4e9041a8e0d" />
 
-Codex Launcher is an **unofficial** IntelliJ IDEA plugin that keeps the OpenAI Codex CLI one click away inside the IDE.
+Codext Launcher is an **unofficial** IntelliJ IDEA launcher for [Codext](https://github.com/Loongphy/codext), based on [Codex Launcher](https://github.com/x0x0b/codex-launcher).
 
-> **Important:** Install the [OpenAI Codex CLI](https://github.com/openai/codex) separately before using this plugin.
+> **Important:** Install [Codext](https://github.com/Loongphy/codext) separately before using this plugin: `npm i -g @loongphy/codext`.
+
+## Changes in 1.1.18
+
+- Changed the terminal launch command from `codex` to `codext` to use Loongphy/codext.
+- Preserved existing CLI arguments, including the `notify` callback for IDE refresh and completion notifications.
+- Renamed the README display title to **Codext Launcher**. IDE action, settings, and terminal tab labels still use **Codex**.
 
 > **For Windows users:** Please select your terminal shell in the plugin settings to ensure proper functionality. Go to _Settings (→ Other Settings) → Codex Launcher_.
 
@@ -32,17 +33,17 @@ Codex Launcher is an **unofficial** IntelliJ IDEA plugin that keeps the OpenAI C
 
 ### Prerequisites
 - IntelliJ IDEA 2024.2 or later (or other compatible JetBrains IDEs)
-- OpenAI Codex CLI installed and available in your system PATH
+- Codext installed and the `codext` command available in your terminal shell
 
 ### Installation
-[![Install Plugin](https://img.shields.io/badge/Install%20Plugin-JetBrains-orange?style=for-the-badge&logo=jetbrains&logoColor=white)](https://plugins.jetbrains.com/plugin/28264-codex-launcher)
+Build this modified checkout, then select **Settings → Plugins → ⚙ → Install Plugin from Disk** and choose `build/distributions/codex-launcher-1.1.18.zip`.
 
 ## 🚀 Usage
 
 ### Quick Start
 1. Click the **Launch Codex** button in the main toolbar.
 2. Or choose **Tools** → **Launch Codex**.
-3. The integrated terminal opens a new "Codex" tab and runs `codex` automatically.
+3. The integrated terminal opens a new "Codex" tab and runs `codext` automatically with the configured CLI arguments.
 
 ### Configuration
 Open **Settings (→ Other Settings) → Codex Launcher** to pick the launch mode, model, notification behavior, and auto-open options.
@@ -51,8 +52,6 @@ Open **Settings (→ Other Settings) → Codex Launcher** to pick the launch mod
 
 ### Building from Source
 ```bash
-git clone https://github.com/x0x0b/codex-launcher.git
-cd codex-launcher
 ./gradlew buildPlugin
 ```
 
